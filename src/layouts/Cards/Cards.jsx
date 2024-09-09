@@ -7,7 +7,7 @@ export const Cards = ({ data }) => {
   
   return (
     <>
-      <section>
+      <section className={s.cards}>
         <Container>
           <div className={s.cards__wrapper}>
             {data.map((el) => (

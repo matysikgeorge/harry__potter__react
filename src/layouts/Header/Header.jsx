@@ -3,20 +3,18 @@ import { Select } from "../../ui/Select/Select";
 import { Container } from "../Container/Container";
 import s from "./Header.module.scss";
 
-export const Header = (cardFind) => {
+export const Header = ({ cardFind }) => {
   return (
     <>
-      <header>
+      <header className={s.header}>
         <Container>
-          <div classNames={s.header__wrapper}>
-            <h1 className={s.header__title}>Harry Potter</h1>
-            <p className={s.header__text__info}>
-              View all characters from the Harry Potter universe
-            </p>
-            <div className={s.form__wrapper}>
-              <Input cardFind={cardFind}></Input>
-              <Select />
-            </div>
+          <h1 className={s.header__title}>Harry Potter</h1>
+          <p className={s.header__subtitle}>
+            View all characters from the Harry Potter universe
+          </p>
+          <div className={s.header__wrapper}>
+            <Input cardFind={cardFind}></Input>
+            <Select />
           </div>
         </Container>
       </header>
